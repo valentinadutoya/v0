@@ -1,0 +1,121 @@
+/* Base styles */ * { margin: 0; padding: 0; box-sizing: border-box; } body {
+font-family: Arial, Helvetica, sans-serif; background-color: #f8f1e7; color:
+#2c2c2c; line-height: 1.6; } .container { max-width: 1200px; margin: 0 auto;
+padding: 2rem; } /* Navigation */ .navbar { display: flex; flex-direction:
+column; align-items: center; margin-bottom: 2rem; } .logo-small { margin-bottom:
+1rem; text-align: center; } .logo-small a { display: flex; flex-direction:
+column; align-items: center; text-decoration: none; color: inherit; }
+.logo-small img { width: 80px; height: auto; } .brand-name-small { font-size:
+1.2rem; text-align: center; margin-top: 0.5rem; } .nav-links { display: flex;
+gap: 2rem; } .nav-links a { color: #2c2c2c; text-decoration: none; transition:
+all 0.3s ease; } .nav-links a:hover { text-decoration: underline; } .nav-links
+.active { font-weight: bold; } /* Home page */ .home-content { display: flex;
+flex-direction: column; align-items: center; max-width: 800px; margin: 0 auto; }
+.logo-container { text-align: center; margin-bottom: 2rem; } .logo { width:
+180px; height: auto; margin-bottom: 1rem; } .brand-name { font-size: 2.5rem;
+text-align: center; } .description { max-width: 600px; } .description p {
+margin-bottom: 1rem; } /* Products page */ .products-content { max-width: 900px;
+margin: 0 auto; } .product-card { display: flex; margin-bottom: 2rem; gap: 2rem;
+} .product-image { flex: 1; } .product-image img { width: 100%; max-width:
+250px; height: auto; border-radius: 8px; } .product-info { flex: 2; }
+.product-title { display: flex; align-items: center; margin-bottom: 0.5rem; }
+.dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 0.5rem; }
+.orange { background-color: #FF6B35; } .green { background-color: #4CAF50; }
+.purple { background-color: #9C27B0; } .product-price { font-weight: bold;
+margin-bottom: 0.5rem; } .buy-button { background-color: #65558f; color: white;
+border: none; border-radius: 20px; padding: 0.5rem 1rem; margin-top: 1rem;
+cursor: pointer; font-size: 0.9rem; } .buy-button:hover { background-color:
+#534a7b; } /* About page */ .about-content { max-width: 700px; margin: 0 auto; }
+.page-title { font-size: 1.8rem; text-align: center; margin-bottom: 2rem; }
+.about-text p { margin-bottom: 1.5rem; } /* Contact page */ .contact-content {
+max-width: 700px; margin: 0 auto; } .contact-form-container { background-color:
+rgba(255, 255, 255, 0.5); padding: 2rem; border-radius: 8px; } .form-intro {
+margin-bottom: 1.5rem; } .contact-form { margin-bottom: 2rem; } .form-group {
+margin-bottom: 1.5rem; } .form-group label { display: block; margin-bottom:
+0.5rem; } .form-group input, .form-group textarea { width: 100%; padding:
+0.5rem; border: 1px solid #d9d9d9; border-radius: 4px; background-color:
+#f5f5f5; } .submit-button { background-color: #65558f; color: white; border:
+none; border-radius: 4px; padding: 0.5rem 1rem; cursor: pointer; }
+.submit-button:hover { background-color: #534a7b; } .contact-info { margin-top:
+2rem; } .contact-info p { margin-bottom: 1rem; } .social-media ul {
+list-style-type: disc; margin-left: 2rem; } .social-media a { color: #65558f;
+text-decoration: none; } .social-media a:hover { text-decoration: underline; }
+/* Responsive styles */ @media (max-width: 768px) { .product-card {
+flex-direction: column; } .product-image { margin-bottom: 1rem; } .product-image
+img { max-width: 100%; } }
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manos de Tierra - Contacto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo-small">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Manos de Tierra Logo" />
+            <h2 class="brand-name-small">
+              MANOS<br />
+              DE TIERRA
+            </h2>
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+          <a href="nosotros.html">Nosotros</a>
+          <span class="active">Contacto</span>
+        </div>
+      </nav>
+
+      <main class="contact-content">
+        <h1 class="page-title">📍 Contacto</h1>
+
+        <div class="contact-form-container">
+          <p class="form-intro">📝 O completa el formulario:</p>
+
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Enviar</button>
+          </form>
+
+          <div class="contact-info">
+            <p><strong>📱 WhatsApp:</strong> +54 9 11 2345 6789</p>
+            <p><strong>📧 Email:</strong> manosdetierra@gmail.com</p>
+
+            <div class="social-media">
+              <p><strong>📱 Redes Sociales:</strong></p>
+              <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
